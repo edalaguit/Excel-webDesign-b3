@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FontAwesome Site Icons for SocMed Icons-->
+    <script src="https://kit.fontawesome.com/7c04fe9cbf.js" crossorigin="anonymous"></script>
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <title>FLOATING BUTTON</title>
+
+</head>
+<body class="black lighten-3">
+
+    <div class="container">
+
+        <!-- Start of Container -->
+        <h1 class="pink-text text-lighten-4">FLOATING BUTTONS</h1>
+    
+        <!-- Floating Buttons -->
+        <button class="btn-floating btn-large waves-effect waves-light red">
+            <i class="material-icons">add</i></button>
+
+        <a class="btn-floating btn-large waves-effect waves-light purple">
+            <i class="material-icons">edit</i></a>
+
+        <!-- Pulse Effect -->
+        <button class="btn-floating btn-large waves-effect waves-light amber pulse">
+            <i class="material-icons">edit</i></button>
+
+        <!-- Fixed Action Buttons -->
+        <div class="fixed-action-btn">
+            <a href="" class="btn-floating btn-large red">
+                <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+                <li>
+                    <a href="" class="btn-floating waves-effect waves-light red">
+                        <i class="material-icons">insert_chart</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="btn-floating waves-effect waves-light red">
+                        <i class="material-icons">format_quote</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="btn-floating waves-effect waves-light red">
+                        <i class="material-icons">attach_file</i>
+                    </a>
+                </li>
+                <li><a href="" class="btn-floating red">
+                        <i class="material-icons waves-effect waves-light">insert_drive_file</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+    
+    <!--  Start of Container -->
+    </div>
+    
+    <div style="height: 500px;"></div>
+
+    
+    <!---JQueryCDN--->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <!-- Initialization using Jquery -->
+    <script>
+        $(document).ready(function(){
+            $('.fixed-action-btn').floatingActionButton();
+        });
+        $('.fixed-action-btn').floatingActionButton({
+             toolbarEnabled: true}
+        );
+    </script>
+
+</body>
+</html>
