@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/99899855f6.js" crossorigin="anonymous"></script>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and Minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <style>
+      [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+      background-color: rgb(6, 10, 247);
+      }
+
+      [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after {
+          border: 2px solid  rgb(6, 10, 247);;
+      }
+
+      .input-field>label {
+          color: ivory;
+      }
+  </style>
+
+    <title>Form 1</title>
+</head>
+<body class="cyan darken-4">
+    <div class="container">
+        <h1 class="white-text text-darken-4">Forms</h1>
+        <form>
+            <div class="input-field">
+                <input type="text" id="name">
+                <label for="name">Name</label>
+            </div>
+
+            <!-- Value & Disabled -->
+            <div class="input-field">
+                <input type="text" id="email" type="email" disabled value="abcde@gmail.com">
+                <label for="email">Email</label>
+            </div>
+
+            <!-- Text Area -->
+            <div class="input-field">
+                <textarea name="" id="messsage" class="materialize-textarea">
+                </textarea>
+                <label for="message">Message</label>
+            </div>
+
+            <!-- Inline Field -->
+            <div class="input-field inline">
+                <input type="text" id="users">
+                <label for="">Email</label>
+            </div>
+
+            <!-- Icon Prefix -->
+            <div class="input-field">
+                <i class="material-icons prefix">phone</i>
+                <input type="text" id="phone">
+                <label for="">Phone Numbers</label>
+            </div>
+
+            <!-- Validation & Error -->
+            <div class="input-field">
+                <input type="email" id="email" class="validate" placeholder="Email">
+                <label for="email" data-error="Invalid" data-success="Valid">Email</label>
+                <span class="helper-text" data-error="Error" data-success="Valid">
+                </span>
+            </div>
+
+            <!-- Select (Must be Initialized) -->
+            <div class="input-field">
+                <select>
+                    <option value="" disabled selected>Select Option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                <label>Select List</label>
+            </div>
+
+            <!-- Option Group -->
+            <div class="input-field">
+                <select>
+                    <optgroup label="Option Group 1">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </optgroup>
+                    <optgroup label="Option Group 2">
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </optgroup>
+                </select>
+                <label>Option Group Select</label>
+            </div>
+
+            <!-- Radio Buttons -->
+            <p>
+                <label>
+                    <input type="radio" id="gender" id="male" checked/>
+                    <span>Male</span>
+                </label>
+                <br>
+                <label>
+                    <input type="radio" id="gender" id="male"/>
+                    <span>Male</span>
+                </label>
+                <label>
+                    <input type="radio" id="gender" id="female" class="with-gap"/>
+                    <span>Female</span>
+                </label>
+            </p>
+        </form>
+
+        <br>
+
+        <!-- Checkboxes -->
+        <form action="#">
+            <p>
+              <label>
+                <input type="checkbox" />
+                <span>Red</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" checked="checked" />
+                <span>Yellow</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" class="filled-in" checked="checked" />
+                <span>Filled in</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input id="indeterminate-checkbox" type="checkbox" />
+                <span>Indeterminate Style</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" checked="checked" disabled="disabled" />
+                <span>Green</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input type="checkbox" disabled="disabled" />
+                <span>Brown</span>
+              </label>
+            </p>
+          </form>
+    <!--End of the Container-->
+    </div>
+
+    <div style="height: 1000px;"></div>
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Compiled & Minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $('select').formSelect();
+    });
+    </script>
+</body>
+</html>
